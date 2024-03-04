@@ -52,55 +52,18 @@ print(f"Accuracy on the test set: {test_accuracy * 100:.2f}%")
 
 # System entropy
 print("System entropy:", decisionTree.entropy)
-print(data)
+# print(data)
 
-# Predict outcomes for the test set
-test_predictions = [decisionTree.predict(
-    decisionTree.root, sample) for sample in data.iloc[:, :-1].values.tolist()]
+# # Predict outcomes for the test set
+# test_predictions = [decisionTree.predict(
+#     decisionTree.root, sample) for sample in data.iloc[:, :-1].values.tolist()]
 
-# Calculate the confusion matrix
-conf_matrix = confusion_matrix(
-    data.iloc[:, -1].values.tolist(), test_predictions, labels=decisionTree.labelCodes)
+# # Calculate the confusion matrix
+# conf_matrix = confusion_matrix(
+#     data.iloc[:, -1].values.tolist(), test_predictions, labels=decisionTree.labelCodes)
 
-print("Confusion Matrix:")
-print(conf_matrix)
-print(data['poisonous'].value_counts())
+# print("Confusion Matrix:")
+# print(conf_matrix)
+# print(data['poisonous'].value_counts())
 
-# # fetch dataset
-# mushroom = fetch_ucirepo(id=73)
-# 
-# # data (as pandas dataframes)
-# X = mushroom.data.features
-# y = mushroom.data.targets
-# 
-# # Reading CSV file as data set by Pandas
-# data = pd.concat([X, y], axis=1)
-# columns = data.columns
-# 
-# # All columns except the last one are descriptive by default
-# descriptive_features = columns[:-1]
-# # The last column is considered as label
-# label = columns[-1]
-# 
-# # Converting all the columns to string
-# for column in columns:
-#     data[column] = data[column].astype(str)
-# 
-# data_descriptive = data[descriptive_features].values
-# data_label = data[label].values
-# 
-# # Calling DecisionTree constructor (the last parameter is criterion which can also be "gini")
-# decisionTree = DecisionTree(data_descriptive.tolist(
-# ), descriptive_features.tolist(), data_label.tolist(), "entropy")
-# 
-# # Here you can pass pruning features (gain_threshold and minimum_samples)
-# decisionTree.id3(0, 0)
-# 
-# # Visualizing decision tree by Graphviz
-# dot = decisionTree.print_visualTree(render=True)
-# 
-# # When using Jupyter
-# # display( dot )
-# 
-# print("System entropy: ", format(decisionTree.entropy))
-# print("System gini: ", format(decisionTree.gini))
+
