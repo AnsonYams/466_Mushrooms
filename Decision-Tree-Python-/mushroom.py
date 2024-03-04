@@ -39,8 +39,6 @@ decisionTree.id3(0, 0)
 dot = decisionTree.print_visualTree(
     render=True)  # Set render=True to visualize
 
-# Implement the predict and calculate_accuracy methods in DecisionTree class beforehand
-
 # Calculate accuracy on the training set
 train_accuracy = decisionTree.calculate_accuracy(
     train_descriptive, train_label)
